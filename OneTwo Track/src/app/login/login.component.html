@@ -1,0 +1,26 @@
+<div class="container-row logoPage">
+  <div fxFlex="70">ciao</div>
+  <div fxFlex="30">
+    <mat-card id="card" class="card"> 
+        <mat-card-title>
+        Login
+      </mat-card-title>
+      <br/><br/>
+    
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput placeholder="email">
+        </mat-form-field><br/>
+    
+        <mat-form-field>
+          <input matInput placeholder="password">
+        </mat-form-field><br/><br/><br/>
+        <button mat-raised-button color="primary" style="margin-right:5px;" routerLink="/dashboard">Login</button>
+        
+    
+      </mat-card-content>
+      <p class="clickable" (click)="openDialog()">Registrati</p>
+    </mat-card>
+  </div>
+
+</div>
