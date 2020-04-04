@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import 'hammerjs';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,8 +18,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CdkStepperModule } from '@angular/cdk/stepper';
+import { MatStepperModule } from '@angular/material/stepper';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
+
+
 
 import { SearchPageComponent } from './search-page/search-page.component';
 import { MessagePageComponent } from './message-page/message-page.component';
@@ -50,6 +61,8 @@ import { InitialRecComponent } from './initial-rec/initial-rec.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
@@ -59,18 +72,23 @@ import { InitialRecComponent } from './initial-rec/initial-rec.component';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule, 
-    MatFormFieldModule, 
+    MatInputModule,
+    MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
     MatDialogModule,
-    
-    FormsModule 
+    MatSelectModule,
+    MatSlideToggleModule,
+    CdkStepperModule,
+    MatStepperModule,
+    ScrollingModule,
+
+    FormsModule
   ],
   providers: [],
   entryComponents: [
     InitialRecComponent,
-],
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

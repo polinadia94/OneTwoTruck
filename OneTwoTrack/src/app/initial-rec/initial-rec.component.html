@@ -5,7 +5,7 @@
   <button mat-button mat-dialog-close>&times;</button>
 </mat-toolbar>
 <div class="dialog">
-<button mat-raised-button color="primary" class="element" routerLink="/corporate" mat-dialog-close>Azienda</button>
-<button mat-raised-button color="primary" class="element" routerLink="/individual" mat-dialog-close>Privato</button>
+<button mat-raised-button color="primary" class="element" (click)="closeCorporate()">Azienda</button>
+<button mat-raised-button color="primary" class="element" (click)="closeIndividual()" >Privato</button>
         
 </div>

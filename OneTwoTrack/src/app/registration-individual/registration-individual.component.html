@@ -1,1 +1,115 @@
-<p>registration-individual works!</p>
+<div class="container-row">
+    <div fxFlex fxFlexOffset="20px" class="form-size">
+        <p>{{ accountFormOne.value | json }} {{ accountFormOne.status | json }}</p>
+        <p>{{ accountFormTwo.value | json }} {{ accountFormTwo.status | json }}</p>
+        <mat-horizontal-stepper linear #stepper>
+            <mat-step [stepControl]="accountFormOne">
+                <form novalidate [formGroup]="accountFormOne">
+                    <ng-template matStepLabel></ng-template>
+                    <p>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="legalName" placeholder="Nome e Cognome" type="text"
+                                required>
+                            <mat-error
+                                *ngIf="accountFormOne.get('legalName').hasError('required') && accountFormOne.get('legalName').touched">
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="tin" placeholder="Codice fiscale" type="text" required>
+                            <mat-error
+                                *ngIf="accountFormOne.get('tin').hasError('required') && accountFormOne.get('tin').touched">
+                            </mat-error>
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="legalLocation" placeholder="Indirizzo 1" type="text"
+                                required>
+                            <mat-error
+                                *ngIf="accountFormOne.get('legalLocation').hasError('required') && accountFormOne.get('legalLocation').touched">
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="operationsLocation" placeholder="Indirizzo 2"
+                                type="text">
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="phoneNumber" placeholder="Numero di telefono" type="tel"
+                                required>
+                            <mat-error
+                                *ngIf="accountFormOne.get('phoneNumber').hasError('required') && accountFormOne.get('phoneNumber').touched">
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="email" placeholder="Email" type="email" required>
+                            <mat-error
+                                *ngIf="accountFormOne.get('email').hasError('required') && accountFormOne.get('email').touched">
+                            </mat-error>
+                        </mat-form-field>
+                        <div>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+
+                </form>
+            </mat-step>
+
+            <mat-step [stepControl]="accountFormTwo" [optional]="isOptional">
+                <form [formGroup]="accountFormTwo">
+                    <ng-template matStepLabel>Descrizione</ng-template>
+
+                    
+                    <mat-selection-list #product formControlName="product" class="half-width">
+                        <mat-list-option value="General Cargo" >
+                            General Cargo
+                        </mat-list-option>
+                        <mat-list-option  value="Catena del Freddo">
+                            Catena del Freddo
+                        </mat-list-option>
+                        <mat-list-option  value="Alimentari">
+                            Alimentari
+                        </mat-list-option>
+                        <mat-list-option  value="Merci Pericolose">
+                            Merci Pericolose
+                        </mat-list-option>
+                        <mat-list-option  value="Trasporti Straordinari">
+                            Trasporti Straordinari
+                        </mat-list-option>
+                      </mat-selection-list>
+                    
+                    <p>
+                        <mat-form-field class="full-width">
+                            <textarea matInput formControlName="description" placeholder="Racconta un po di te"
+                                rows=12></textarea>
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="password" placeholder="password" type="text" required>
+                            <mat-error
+                                *ngIf="accountFormTwo.get('password').hasError('required') && accountFormTwo.get('password').touched">
+                            </mat-error>
+                        </mat-form-field>
+                    </p>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext (click)="onSubmit()">Next</button>
+                    </div>
+                </form>
+            </mat-step>
+
+            <mat-step [optional]="isOptional">
+
+                <ng-template matStepLabel>Esito</ng-template>
+                <p>Ti sei registrato con successo</p>
+                <p>Premi indietro per modificare il tuo profilo oppure premi prosegui per iniziare</p>
+                <div>
+                    <button mat-button matStepperPrevious>Indietro</button>
+                    <button mat-button (click)="onDash()">Prosegui</button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+
+    </div>
+</div>

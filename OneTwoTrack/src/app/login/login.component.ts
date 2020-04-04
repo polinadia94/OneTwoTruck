@@ -10,7 +10,6 @@ import { InitialRecComponent } from '../initial-rec/initial-rec.component';
 })
 export class LoginComponent implements OnInit {
 user={email:'', password:''}
-  hide = true;
 
   constructor(public dialog: MatDialog) { }
 
