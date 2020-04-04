@@ -1,18 +1,19 @@
-import { Account }, from './account',
+import { User } from './user';
 
-export const ACCOUNTS: Account[] =[
+
+export const USERS: User[] =[
     {
         id:0,
         legalName: "Anastasio Giuse",
         type: "Privato",
-        email: "gsints72b08h885a@mailstop.it":
+        email: "gsints72b08h885a@mailstop.it",
         password: "Y4v8NEq6mz",
         phoneNumber: 3137103658,
         legalNumber: "",
         legalLocation: "Via Marco Mingetti, SAN GIORGIO DI LOMELLINA (PV) - ITALIA",
         operationsLocation: "Via Marco Mingetti, SAN GIORGIO DI LOMELLINA (PV) - ITALIA",
         tin: "IT02075120606",
-        description: "Anastasio Giuse, trasportatore con esperienza pluriennale, proprietario di ditta individuale e disposto a coprire lunghe distanze."
+        description: "Anastasio Giuse, trasportatore con esperienza pluriennale, proprietario di ditta individuale e disposto a coprire lunghe distanze.",
     
         contContractSend: 0,
         contContractReceive: 0,
@@ -365,7 +366,7 @@ export const ACCOUNTS: Account[] =[
         product: ['Catena del Freddo','Alimentari'],
     
         pay: "4",
-        durationContract: "2",
+        durationContract: 2,
         
     },
     

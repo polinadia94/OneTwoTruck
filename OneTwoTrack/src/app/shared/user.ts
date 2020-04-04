@@ -1,4 +1,4 @@
-export class Account {
+export class User {
     id:number;
     legalName: string; //Nome Cognome o Ragione Sociale
     type: string;

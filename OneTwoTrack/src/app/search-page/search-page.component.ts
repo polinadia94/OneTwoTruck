@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {USERS} from '../shared/users';
+import {User} from '../shared/user'
 
   
 
@@ -9,9 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
   
+  users=USERS;
   
-  
-  
+  //type=this.accounts.values();
+
   constructor() { }
 
   ngOnInit(): void {

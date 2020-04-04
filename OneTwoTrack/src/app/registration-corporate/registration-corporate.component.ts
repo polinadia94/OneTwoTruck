@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { Account, TYPE } from '../shared/account';
+import { User, TYPE } from '../shared/user';
 import { Router } from '@angular/router';
 
 const PRODUCT= ['General Cargo','Catena del Freddo','Alimentari','Merci Pericolose','Trasporti Straordinari']
@@ -18,10 +18,10 @@ export class RegistrationCorporateComponent implements OnInit {
   accountFormOne: FormGroup;
   accountFormTwo:FormGroup
  
-  accountInfo: Account;
-  accountDescription:Account;
+  accountInfo: User;
+  accountDescription:User;
   type = TYPE;
-  product:Account["product"]= PRODUCT;
+  product:User["product"]= PRODUCT;
   isOptional = false;
 
   

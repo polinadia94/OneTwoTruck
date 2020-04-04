@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { InitialRecComponent } from '../initial-rec/initial-rec.component';
+import { FormGroup, FormControl } from '@angular/forms';
+import { AccountService } from '../services/account.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,18 +12,41 @@ import { InitialRecComponent } from '../initial-rec/initial-rec.component';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-user={email:'', password:''}
+  loginForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  })
 
-  constructor(public dialog: MatDialog) { }
+  message=false;
+
+  constructor(public dialog: MatDialog,
+    private accountService: AccountService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
   onSubmit() {
-    console.log('User: ', this.user);
-   
+    console.log(this.loginForm.value)
+    const esito = this.accountService.login(this.loginForm.value.email, this.loginForm.value.password);
+    if (esito) {
+      console.log('utente trovato');
+      this.router.navigate(["/dashboard"])
+    } else {
+      console.log("utente non trovato");
+      this.message=true;
+    }
+
   }
-  openDialog(){
-    this.dialog.open(InitialRecComponent, {width: '350px', height: '350px'});
+  /*submit(){
+    const esito=this.accountService.login(this.loginForm.value.email,this.loginForm.value.password);
+    if (esito){
+      console.log('utente trovato')
+    } else {
+      console.log("utente non trovato");
+    }
+  }*/
+  openDialog() {
+    this.dialog.open(InitialRecComponent, { width: '350px', height: '350px' });
   }
 
 }

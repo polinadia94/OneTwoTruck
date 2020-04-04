@@ -12,6 +12,6 @@ export class AppComponent implements OnInit{
 
   }
 ngOnInit(){
-  //this.location.isCurrentPathEqualTo(path: string, query: string = ''): boolean;
+  
 }
 }

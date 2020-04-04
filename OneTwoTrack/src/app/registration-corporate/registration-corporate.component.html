@@ -1,7 +1,6 @@
 <div class="container-row">
-    <div fxFlex fxFlexOffset="20px" class="form-size">
-        <p>{{ accountFormOne.value | json }} {{ accountFormOne.status | json }}</p>
-        <p>{{ accountFormTwo.value | json }} {{ accountFormTwo.status | json }}</p>
+    <div fxFlex fxFlexOffset="20px" class="full-width">
+
         <mat-horizontal-stepper linear #stepper>
             <mat-step [stepControl]="accountFormOne">
                 <form novalidate [formGroup]="accountFormOne">

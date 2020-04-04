@@ -11,9 +11,21 @@
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
-    
+    margin-bottom: 35%;
+}
+.contentCard{
+    margin:10%;
+}
+.clickable{
+    cursor: pointer;
+    color: #3f51b5;
+    font-size: 8pt;
 }
 
-.clickable{
-    pointer-events: visible;
+.alert{
+    color:95822d;
+    background-color:#beac5f;
+    border:1px solid  #95822d;
+    border-radius: 3px;
+    padding:10px;
 }
