@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RememberUserService } from '../services/remember-user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+type=false;
+  constructor(private remember:RememberUserService) { }
 
   ngOnInit(): void {
+    if (this.remember.myAccount.type=="Azienda"){
+this.type=true;
+    }
+    else if( this.remember.myAccount.type=="Privato"){
+      this.type=false;
+    }
   }
 
 }

@@ -25,6 +25,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { MatStepperModule } from '@angular/material/stepper';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 
@@ -82,6 +83,7 @@ import { InitialRecComponent } from './initial-rec/initial-rec.component';
     CdkStepperModule,
     MatStepperModule,
     ScrollingModule,
+    MatCarouselModule.forRoot(),
 
     FormsModule
   ],

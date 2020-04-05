@@ -1,1 +1,13 @@
-<p routerLink="/search">dashboard works!</p>
+
+<div class=".container-row display">
+    <div class="column">
+        <img src="/assets/images/icon-aziende.svg" *ngIf="type" title="Visualizza profilo">
+        <img src="/assets/images/icon-privati.svg" *ngIf="!type" title="Visualizza profilo">
+        <img src="/assets/images/icon-contracts.svg" title="I miei contratti">
+    </div>
+    <div class="column">
+        <img  routerLink="/search" src="/assets/images/icon-search.svg" title="Cerca lavoratori">
+        <img src="/assets/images/icon-terms.svg" title="Regolamento">
+    </div>
+    
+</div>

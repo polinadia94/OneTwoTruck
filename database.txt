@@ -9,7 +9,7 @@
     legalLocation: "Via Marco Mingetti, SAN GIORGIO DI LOMELLINA (PV) - ITALIA";
     operationsLocation: "Via Marco Mingetti, SAN GIORGIO DI LOMELLINA (PV) - ITALIA";
     tin: "IT02075120606";
-    description: "Anastasio Giuse, trasportatore con esperienza pluriennale, proprietario di ditta individuale e disposto a coprire lunghe distanze."
+    description: "Anastasio Giuse, trasportatore con esperienza pluriennale, proprietario di ditta individuale e disposto a coprire lunghe distanze.";
 
     contContractSend: 0;
     contContractReceive: 0;

@@ -14,3 +14,20 @@ $background-pale: #D1C4E9;
     color:floralwhite;
     min-height: 150px;
 }
+
+img{
+    height: 60px;
+    margin: 10px;
+    vertical-align: middle;
+}
+.separator{
+    width:30%;
+    display: flex;
+    flex:1;
+}
+.fa{
+    margin:5px;
+}
+.link{
+    margin-right: -20px;
+}

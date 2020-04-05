@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router,  } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  loginPage=true;
+  visible=false
+  
 
-  constructor(){
+
+  constructor(private router:Router){
 
   }
 ngOnInit(){
-  
+  if (this.router.url == '/login' || this.router.url== ""
+  || this.router.url == "/individual" || this.router.url =="/corporate"){
+    this.visible=false;
+  }
+  else this.visible=true;
+ 
 }
+
 }
