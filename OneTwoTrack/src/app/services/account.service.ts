@@ -20,6 +20,10 @@ export class AccountService {
     });
     return foundUser;
   }
+
+  getUser(id){
+    return USERS.filter((user) => (user.id == id))[0];
+  }
 }
 
 

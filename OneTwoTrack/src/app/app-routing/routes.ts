@@ -9,6 +9,7 @@ import { SearchPageComponent } from '../search-page/search-page.component';
 import { DataSheetComponent } from '../data-sheet/data-sheet.component';
 import { MessagePageComponent } from '../message-page/message-page.component';
 import { AboutComponent } from '../about/about.component';
+import { ContractComponent} from '../contract/contract.component';
 
 
 
@@ -21,5 +22,7 @@ export const routes: Routes = [
     { path: 'data', component: DataSheetComponent },
     { path: 'message', component: MessagePageComponent },
     { path: 'about', component: AboutComponent },
-    { path: '', redirectTo: '/login', pathMatch: 'full' }
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'data/:id',     component: DataSheetComponent },
+    { path: 'onetwoTruckContract',     component: ContractComponent },
 ];

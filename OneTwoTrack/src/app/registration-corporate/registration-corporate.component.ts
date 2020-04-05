@@ -60,6 +60,7 @@ export class RegistrationCorporateComponent implements OnInit {
       description:'',
       product:'',
       password:'',
+      legalNumber:'',
      
       
     });
@@ -69,7 +70,8 @@ export class RegistrationCorporateComponent implements OnInit {
   onSubmit() {
   this.accountInfo = this.accountFormOne.value
   this.accountDescription= this.accountFormTwo.value;
-  this.remeber.myAccount = Object.assign(this.accountInfo,this.accountDescription );
+  const myAccount=Object.assign(this.accountInfo,this.accountDescription );
+  this.remeber.myAccount = myAccount
   console.log(this.remeber.myAccount)
   
     

@@ -1,5 +1,5 @@
 <div class="fixedBox">
-<app-header class="header" *ngIf="visible"></app-header>
+<app-header class="header" [hidden]="hideElement"></app-header>
 <div class="content">
 <router-outlet></router-outlet>
 </div>

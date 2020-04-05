@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+    Compila tutti i campi 
+    <span class="flex-spacer"></span>
+    <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="contractForm">
+
+    <mat-dialog-content>
+        <div fxFlex="30">
+            <mat-form-field>
+                <input matInput formControlName="pay" placeholder="Compenso al Km" type="text" name="pay" >
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput formControlName="durationContract" placeholder="Durata Contratto" type="number" name="durationContract" >
+            </mat-form-field>
+        </div>
+        <div fxFlex="70">
+            <mat-selection-list formControlName="productRequest"  color="primary" class="half-width">
+                <mat-list-option value="General Cargo">
+                    General Cargo
+                </mat-list-option>
+                <mat-list-option value="Catena del Freddo">
+                    Catena del Freddo
+                </mat-list-option>
+                <mat-list-option value="Alimentari">
+                    Alimentari
+                </mat-list-option>
+                <mat-list-option value="Merci Pericolose">
+                    Merci Pericolose
+                </mat-list-option>
+                <mat-list-option value="Trasporti Straordinari">
+                    Trasporti Straordinari
+                </mat-list-option>
+            </mat-selection-list>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <span class="flex-spacer"></span>
+
+        <button type="submit" mat-button class="background-primary text-floral-white">Genera contratto</button>
+        <button mat-button mat-dialog-close>Annulla</button>
+    </mat-dialog-actions>
+</form>

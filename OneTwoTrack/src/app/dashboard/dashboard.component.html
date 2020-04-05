@@ -6,7 +6,7 @@
         <img src="/assets/images/icon-contracts.svg" title="I miei contratti">
     </div>
     <div class="column">
-        <img  routerLink="/search" src="/assets/images/icon-search.svg" title="Cerca lavoratori">
+        <img  routerLink="/search" src="/assets/images/icon-search.svg" *ngIf="!type" title="Cerca lavoratori">
         <img src="/assets/images/icon-terms.svg" title="Regolamento">
     </div>
     

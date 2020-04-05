@@ -1,0 +1,160 @@
+<div class="contract" id="documentToConvert"><h1 id="contrattoditrasportomerciperprestazionesingolaopluralitdiprestazionidapartedisubvettore">
+    Contratto di Trasporto Merci per Prestazione Singola o Pluralità di Prestazioni da Parte di Sub-Vettore</h1>
+
+<h2 id="art1">Art. 1</h2>
+
+<h3 id="identificazionedelleparti">Identificazione delle Parti</h3>
+
+<p>Il presente contratto è concluso tra le parti qui di seguito identificate:
+Vettore-Committente: 
+<strong>{{myAccount.legalName}}</strong>
+<strong>{{myAccount.legalLocation}}</strong>
+con sede operativa in:
+<strong>{{myAccount.operationLocation}}</strong>
+<strong>{{myAccount.legalNumber}}</strong>
+<strong>{{myAccount.tin}}</strong></p>
+
+<p>Sub-Vettore: 
+<strong>{{recipientAccount.legalNumber}}</strong>
+<strong>{{recipientAccount.legalLocation}}</strong>
+con sede operativa in:
+<strong>{{recipientAccount.operationLocation}}</strong>
+<strong>{{recipientAccount.legalNumber}}</strong>
+<strong>{{recipientAccount.tin}}</strong></p>
+
+<p>Congiuntamente definite anche "<strong>Parti</strong>".</p>
+
+<h2 id="art2">Art. 2</h2>
+
+<h3 id="identificazionedellemercitrasportateeduratadelcontratto">Identificazione delle merci trasportate e 
+    durata del contratto</h3>
+
+<p>Il presente contratto ha ad oggetto il trasporto delle seguenti merci:
+tipologia: </p>
+<mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of payment.productRequest">
+        {{item}}</mat-list-item>
+  </mat-list>
+<p>Il trasporto di dette merci avverra' nel rispetto delle indicazioni contenute nella carta di circolazione 
+    del/i Veicolo/i adibito/i al trasporto delle stesse.
+Laddove la quantita' delle merci da trasportarsi in base al presente contratto non sia in questa sede 
+individuata, il Sub-Vettore si impegna a trasportare i quantitativi di merci in relazione ai quali il 
+Vettore-Committente gli farà di volta in volta pervenire, con adeguato anticipo, richiesta di trasporto, 
+nel periodo di vigenza del presente contratto, che le parti convengono in <strong>{{payment.durationContract}}</strong> mesi).</p>
+
+<h2 id="art3">Art.3</h2>
+
+<h3 id="identificazionedelveicoloiadibitoialtrasporto">Identificazione del Veicolo/i adibito/i al trasporto</h3>
+
+<p>Laddove gli elementi identificativi dei veicoli con cui sarà eseguito il trasporto oggetto del 
+    presente contratto non siano in questa sede individuati, ovvero laddove si intenda procedere alla loro 
+    sostituzione con altri veicoli, il Vettore si impegna a comunicare per iscritto al Committente detti 
+    elementi identificativi prima dell'inizio dell'operazione di trasporto. Qualora la sostituzione sia resa
+     necessaria per eventi impeditivi imprevisti, i dati identificativi del veicolo utilizzato potranno 
+     essere comunicati anche successivamente.</p>
+
+<h2 id="art4">Art.4</h2>
+
+<h3 id="luogodiconsegnaediriconsegnadellemerci">Luogo di consegna e di riconsegna delle merci</h3>
+
+<p>Laddove i luoghi di presa in consegna da parte del Sub-Vettore delle merci oggetto del presente contratto 
+    o i luoghi di riconsegna delle stesse merci al/i Destinatario/i non siano in questa sede individuati, 
+    ovvero laddove si intenda procedere ad una variazione degli stessi, il Vettore-Committente si impegna a 
+    comunicare al Sub-Vettore per iscritto detti elementi in tempo utile prima del completamento di ciascuna 
+    prestazione di trasporto. In caso di variazione, tale comunicazione potrà non essere effettuata per 
+    iscritto qualora il nuovo luogo indicato sia nel territorio della provincia in cui si trova il luogo 
+    originario.</p>
+
+<h2 id="art5">Art.5</h2>
+
+<h3 id="dataedoradiconsegnaericonsegnadellemerci">Data ed ora di consegna e riconsegna delle merci</h3>
+
+<p>Le merci di cui al precedente articolo 2 dovranno essere prese in consegna dal Sub-Vettore nei giorni che 
+    saranno di volta in volta indicati dal Vettore-Committente per iscritto e con adeguato anticipo rispetto 
+    alla data di esecuzione di ciascuna prestazione di trasporto) nella fascia oraria tra le ore 9.00 e le 
+    ore 12.00 e dovranno essere riconsegnate al Destinatario nel luogo di cui al precedente articolo 4 il 
+    giorno medesimo non oltre le ore 19.00.</p>
+
+<h2 id="art6">Art. 6</h2>
+
+<h3 id="obblighidelvettorecommittente">Obblighi del Vettore-Committente</h3>
+
+<p>Il Vettore-Committente verificherà che il Sub-Vettore sia abilitato e che i veicoli di cui al precedente 
+    articolo 3 sono, sulla base dei documenti indicati nella medesima disposizione, idonei alla esecuzione
+     dei trasporti affidatigli.
+Il Vettore-Committente verificherà, altresì, la regolarità della posizione del Sub-Vettore con riferimento 
+agli obblighi previdenziali, acquisendo apposita dichiarazione sostitutiva di atto notorio.</p>
+
+<h2 id="art7">Art. 7</h2>
+
+<h3 id="obblighidelsubvettore">Obblighi del Sub-Vettore</h3>
+
+<p>Il Sub-Vettore si impegna ad eseguire direttamente, con la propria organizzazione imprenditoriale, le 
+    prestazioni oggetto del contratto di trasporto e le altre obbligazioni assunte.
+Il contratto si intende <em>intuitu personae</em> e che pertanto non potrà esser in alcun modo ceduto dal
+ Sub-Vettore.</p>
+
+<h2 id="art8">Art. 8</h2>
+
+<h3 id="corrispettivo">Corrispettivo</h3>
+
+<p>A fronte della effettuazione di ciascuna delle prestazioni di trasporto di cui agli articoli che precedono 
+    il Vettore-Committente è tenuto a corrispondere al Sub-Vettore il corrispettivo un corrispettivo 
+    chilometrico pari ad Euro <strong>{{payment.pay}}</strong>/chilometro), oltre ad accessori di legge.
+Detto corrispettivo, sarà adeguato con cadenza mensile in relazione ad eventuali variazioni significative dei 
+costi operativi del Sub-Vettore, ed in particolare a variazioni dei costi esterni sullo stesso gravanti, 
+quali il prezzo del carburante.
+Nel caso il Vettore-Committente ometta di affidare al Sub-Vettore, durante il periodo di vigenza del presente
+ contratto, il trasporto dell'intero quantitativo minimo di merci indicato nel precedente articolo 2, il 
+ Vettore-Committente sarà tenuto a corrispondere al Sub-Vettore un importo congruo, fermo restando il diritto 
+ del Sub-Vettore al risarcimento dell'eventuale maggiore danno subito.
+Il corrispettivo dovuto al Sub-Vettore gli sarà pagato non oltre il termine di 15 giorni da quello in cui il 
+trasporto è stato completato o avrebbe dovuto essere completato, (ovvero da quello in cui la relativa 
+documentazione contabile è stata emessa dal Sub-Vettore), secondo le seguenti modalità: bonifico bancario.</p>
+
+<h2 id="art9">Art. 9</h2>
+
+<h3 id="pattimodificativi">Patti Modificativi</h3>
+
+<p>Ogni accordo modificativo del presente contratto dovrà essere concluso in forma scritta, a pena di 
+    invalidità ai sensi dell'articolo 1352 Codice Civile.</p>
+
+<h2 id="art10">Art. 10</h2>
+
+<h3 id="disciplinaapplicabile">Disciplina Applicabile</h3>
+
+<p>Per tutto quanto non espressamente in questa sede previsto, il presente rapporto è disciplinato dalle 
+    disposizioni di legge applicabili, ed in particolare da quelle di cui agli articoli 1678 e seguenti del
+     codice civile, alla legge 1° marzo 2005, n. 32 e al Decreto legislativo 21 novembre 2005, n. 286.</p>
+
+<h2 id="art11">Art. 11</h2>
+
+<h3 id="forocompetente">Foro Competente</h3>
+
+<p>Il Foro di Milano (Italia) ha competenza esclusiva a giudicare in caso di contestazioni o controversie che 
+    possono comunque insorgere sull’interpretazione, esecuzione e/o risoluzione del presente contratto.</p>
+
+<h4 class="signature">Firmato in Milano il <strong>{{ dateNow | date: 'dd/MM/yyyy' }}</strong></h4>
+
+<h3 class="signature">Firma Vettore-Committente</h3>
+
+<h3 class="signature">Firma Sub-Vettore</h3>
+
+<p>Dichiaro di aver letto ed approvato specificatamente ai sensi degli Articoli 1341 e 1342 del Codice Civile
+     gli articoli del presente contratto.</p>
+
+<h3 class="signature">Firma Sub-Vettore</h3>
+
+</div>
+
+
+<div class="container-row">
+<p> <button mat-raised-button color="primary" style="margin-right:5px;" (click)="generatePdf()">Scarica il PDF</button>
+
+<button mat-button style="margin-right:30px;" (click)="goBack()">Torna Indietro</button></p>
+</div>
+
+
+
+
+

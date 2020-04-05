@@ -6,5 +6,8 @@ import { Injectable } from '@angular/core';
 export class RememberUserService {
   myAccount;
   recipientAccount;
+  payment;
+  
   constructor() { }
+  
 }

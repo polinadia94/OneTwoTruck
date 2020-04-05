@@ -1,30 +1,23 @@
-
-<div class="container-column"
-     fxLayout="column"
-     fxLayoutGap="10px">
-<div fxFlex="70">
-  <mat-list >
-    <mat-list-item *ngFor="let user of users">
-      <img *ngIf="user.type=='Azienda'"src="" alt={{user.type}}>
-      <img *ngIf="user.type=='Privato'"src="" alt={{user.type}}>
-      <h1 matLine> {{user.legalName}} </h1>
-      <p matLine>
-        <span> {{user.operationsLocation}} </span>
-      </p>
-      <p matLine>
-        <span> {{user.product}} </span>
-      </p>
-      <p matLine>
-        <span> {{user.description}} </span>
-      </p>
-    </mat-list-item>
-  </mat-list>
-</div>
-  <mat-divider [vertical]="true"></mat-divider>
-  <mat-card fxFlex="30" *ngFor="let user of users">
-    <mat-card-title>{{user.legalName}}</mat-card-title>
-    <mat-card-subtitle>{{user.product}}</mat-card-subtitle>
-    <mat-card-content>{{user.description}} </mat-card-content>
-    <mat-card-footer>{{user.operationsLocation}}</mat-card-footer>
-  </mat-card>
+<div class="container-column" fxLayout="column" fxLayoutGap="10px">
+  <div fxFlex="70">
+    <mat-list>
+      <mat-list-item *ngFor="let user of users" [routerLink]="['/data', user.id]">
+        <img *ngIf="user.type=='Azienda'" matListAvatar src="/assets/images/icon-aziende.svg" title="Azienda">
+        <img *ngIf="user.type=='Privato'" matListAvatar src="/assets/images/icon-privati.svg" title="Privato">
+        <h1 matLine> {{user.legalName}} </h1>
+        <p matLine>
+          <span> {{user.type}} </span>
+        </p>
+        <p matLine>
+          <span> {{user.operationsLocation}} </span>
+        </p>
+        <p matLine>
+          <span> {{user.product}} </span>
+        </p>
+        <p matLine>
+          <span> {{user.description}} </span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </div>
 </div>

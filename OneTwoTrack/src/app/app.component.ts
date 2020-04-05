@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router,  } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd,  } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +7,22 @@ import { Router,  } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  visible=false
+  hideElement = false;
   
 
 
-  constructor(private router:Router){
-
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if ((event.url == '/login')|| (event.url == '/corporate')||(event.url == '/individual')) {
+          this.hideElement = true;
+        }  else {
+          this.hideElement = false;
+        }
+      }
+    });
   }
 ngOnInit(){
-  if (this.router.url == '/login' || this.router.url== ""
-  || this.router.url == "/individual" || this.router.url =="/corporate"){
-    this.visible=false;
-  }
-  else this.visible=true;
  
 }
 

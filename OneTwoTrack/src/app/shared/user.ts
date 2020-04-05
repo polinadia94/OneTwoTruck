@@ -15,6 +15,7 @@ export class User {
     contContractReceive: number;
     availability:boolean;
     product: string[];
+    productRequest: string[];
 
     pay: string; //Corrispettivo Chilometrico EUR/KM
     durationContract: number; //Numero Mesi (min 1) di durata del contratto

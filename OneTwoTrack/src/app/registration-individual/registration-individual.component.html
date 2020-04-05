@@ -84,6 +84,12 @@
                     </p>
                     <p>
                         <mat-form-field class="half-width">
+                            <input matInput formControlName="legalNumber" placeholder="Codice di Trasporto" type="text" required>
+                            <mat-error
+                                *ngIf="accountFormTwo.get('legalNumber').hasError('required') && accountFormTwo.get('legalNumber').touched">
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="half-width">
                             <input matInput formControlName="password" placeholder="password" type="text" required>
                             <mat-error
                                 *ngIf="accountFormTwo.get('password').hasError('required') && accountFormTwo.get('password').touched">

@@ -59,6 +59,7 @@ export class RegistrationIndividualComponent implements OnInit {
       description:'',
       product:'',
       password:'',
+      legalNumber:'',
      
       
     });
@@ -68,8 +69,8 @@ export class RegistrationIndividualComponent implements OnInit {
   onSubmit() {
   this.accountInfo = this.accountFormOne.value
   this.accountDescription= this.accountFormTwo.value;
-  console.log([this.accountInfo,this.accountDescription]);
-  this.remeber.myAccount = Object.assign(this.accountInfo,this.accountDescription );
+  const myAccount=Object.assign(this.accountInfo,this.accountDescription );
+  this.remeber.myAccount = myAccount
   console.log(this.remeber.myAccount)
     
 // Questa funzione, andrà ad implementare il database in cui sono conservati tutti gli account

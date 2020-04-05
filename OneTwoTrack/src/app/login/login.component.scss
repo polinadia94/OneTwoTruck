@@ -1,7 +1,32 @@
+
 .logoPage{
     padding:40px;
+    display: flex;
 }
+.row{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    color:white;
+}
+.icon{
+margin: 20px;
+}
+.space{
+    height: 250px;
+}
+.title{position: absolute;
+    top: 30px;
+    left:0;
+.subtitle{
+    color:white;
+    margin-left: 10%;
+}}
 
+.textCarousel{
+    color: rgb(208, 196, 235);
+}
 
 .card{
     text-align: center;

@@ -36,7 +36,8 @@ export class LoginComponent implements OnInit {
     const esito = this.accountService.login(this.loginForm.value.email, this.loginForm.value.password);
     if (esito) {
       console.log('utente trovato');
-      this.remeber.myAccount=esito;
+      const user=esito
+      this.remeber.myAccount=user;
       this.router.navigate(["/dashboard"])
       
     } else {

@@ -41,6 +41,8 @@ import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { InitialRecComponent } from './initial-rec/initial-rec.component';
+import { ContractFormComponent } from './contract-form/contract-form.component';
+import { ContractComponent } from './contract/contract.component';
 
 
 @NgModule({
@@ -57,6 +59,8 @@ import { InitialRecComponent } from './initial-rec/initial-rec.component';
     HeaderComponent,
     FooterComponent,
     InitialRecComponent,
+    ContractFormComponent,
+    ContractComponent,
 
   ],
   imports: [
@@ -90,6 +94,7 @@ import { InitialRecComponent } from './initial-rec/initial-rec.component';
   providers: [],
   entryComponents: [
     InitialRecComponent,
+    ContractFormComponent,
   ],
   bootstrap: [AppComponent]
 })
