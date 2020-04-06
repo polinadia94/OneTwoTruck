@@ -1,0 +1,21 @@
+.full-width {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.half-width {
+    width: 45%;
+    margin-right: 10px;
+}
+
+.form-size {
+    width: 75%
+}
+
+textarea{
+    max-height: 65px;
+}

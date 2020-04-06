@@ -46,8 +46,9 @@ export class RegistrationCorporateComponent implements OnInit {
       type: 'Azienda',
       phoneNumber: null,
       email: '',
-      
+      password:'',
       legalNumber:'',
+      
       legalLocation:'',
       operationsLocation:'',
       tin:'',
@@ -59,8 +60,7 @@ export class RegistrationCorporateComponent implements OnInit {
       availability: false,
       description:'',
       product:'',
-      password:'',
-      legalNumber:'',
+     
      
       
     });

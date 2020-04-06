@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import 'hammerjs';
 
@@ -43,6 +44,9 @@ import { FooterComponent } from './footer/footer.component';
 import { InitialRecComponent } from './initial-rec/initial-rec.component';
 import { ContractFormComponent } from './contract-form/contract-form.component';
 import { ContractComponent } from './contract/contract.component';
+import { MyAccountComponent } from './my-account/my-account.component';
+import { RegolamentationComponent } from './regolamentation/regolamentation.component';
+import { ListContractComponent } from './list-contract/list-contract.component';
 
 
 @NgModule({
@@ -61,6 +65,9 @@ import { ContractComponent } from './contract/contract.component';
     InitialRecComponent,
     ContractFormComponent,
     ContractComponent,
+    MyAccountComponent,
+    RegolamentationComponent,
+    ListContractComponent,
 
   ],
   imports: [
@@ -88,6 +95,7 @@ import { ContractComponent } from './contract/contract.component';
     MatStepperModule,
     ScrollingModule,
     MatCarouselModule.forRoot(),
+    Ng2SearchPipeModule,
 
     FormsModule
   ],

@@ -12,8 +12,8 @@ import {User} from '../shared/user'
 export class SearchPageComponent implements OnInit {
   
   users=USERS;
+  searchText;
   
-  //type=this.accounts.values();
 
   constructor() { }
 

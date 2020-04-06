@@ -32,7 +32,6 @@ export class ContractFormComponent implements OnInit {
       pay: '',
       durationContract: null,
       productRequest:'',
-      contContractSend:'1',
     });
     }
   onSubmit() {

@@ -45,7 +45,7 @@ export class RegistrationIndividualComponent implements OnInit {
       type: 'Privato',
       phoneNumber: null,
       email: '',
-      
+      password:'',
       legalNumber:'',
       legalLocation:'',
       operationsLocation:'',
@@ -58,8 +58,8 @@ export class RegistrationIndividualComponent implements OnInit {
       availability: true,
       description:'',
       product:'',
-      password:'',
-      legalNumber:'',
+      
+      
      
       
     });

@@ -11,8 +11,8 @@ export class User {
     tin: string; //CF-PIVA
     description: string; //Descrizione Attività - Presentazione (max XX caratteri)
 
-    contContractSend: number;  //1 euro a generazione
-    contContractReceive: number;
+    contractSend: string[];  //1 euro a generazione
+    contractReceive: string[];
     availability:boolean;
     product: string[];
     productRequest: string[];

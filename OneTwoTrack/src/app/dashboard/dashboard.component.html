@@ -1,13 +1,27 @@
 
-<div class=".container-row display">
-    <div class="column">
-        <img src="/assets/images/icon-aziende.svg" *ngIf="type" title="Visualizza profilo">
-        <img src="/assets/images/icon-privati.svg" *ngIf="!type" title="Visualizza profilo">
-        <img src="/assets/images/icon-contracts.svg" title="I miei contratti">
+<div class="full-width" fxLayout="row" >
+    <div fxLayout="column" fxFlex="50">
+        <div *ngIf="type" routerLink="/personalArea">
+            <img src="/assets/images/icon-aziende.svg" title="Visualizza profilo">
+            <p>Visualizza profilo</p>
+        </div>
+        <div *ngIf="!type" routerLink="/personalArea">
+            <img src="/assets/images/icon-privati.svg"  title="Visualizza profilo">
+            <p>Visualizza profilo</p>
+        </div>
+        <div routerLink="/mieiContratti">
+            <img src="/assets/images/icon-contracts.svg" title="I miei contratti">
+            <p>I miei contratti</p>
+        </div>
     </div>
-    <div class="column">
-        <img  routerLink="/search" src="/assets/images/icon-search.svg" *ngIf="!type" title="Cerca lavoratori">
-        <img src="/assets/images/icon-terms.svg" title="Regolamento">
+    <div fxLayout="column" fxFlex="50">
+        <div *ngIf="type" routerLink="/search" >
+            <img src="/assets/images/icon-search.svg"  title="Cerca lavoratori">
+            <p>Cerca</p>
+        </div>
+        <div routerLink="/regolamentation">
+            <img src="/assets/images/icon-terms.svg" title="Regolamento">
+            <p>Regolamento</p>
+        </div>
     </div>
-    
 </div>

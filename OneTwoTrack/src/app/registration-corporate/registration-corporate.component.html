@@ -30,10 +30,19 @@
                         </mat-form-field>
                         <mat-form-field class="half-width">
                             <input matInput formControlName="operationsLocation" placeholder="Sede Operativa"
-                                type="text">
+                                type="text" required>
+                                <mat-error
+                                *ngIf="accountFormOne.get('operationsLocation').hasError('required') && accountFormOne.get('operationsLocation').touched">
+                            </mat-error>
                         </mat-form-field>
                     </p>
                     <p>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="legalNumber" placeholder="Codice di Trasporto" type="text" required>
+                            <mat-error
+                                *ngIf="accountFormOne.get('legalNumber').hasError('required') && accountFormOne.get('legalNumber').touched">
+                            </mat-error>
+                        </mat-form-field>
                         <mat-form-field class="half-width">
                             <input matInput formControlName="phoneNumber" placeholder="Numero di telefono" type="tel"
                                 required>
@@ -41,14 +50,24 @@
                                 *ngIf="accountFormOne.get('phoneNumber').hasError('required') && accountFormOne.get('phoneNumber').touched">
                             </mat-error>
                         </mat-form-field>
+                    </p>
+                    <p>
+                       
                         <mat-form-field class="half-width">
                             <input matInput formControlName="email" placeholder="Email" type="email" required>
                             <mat-error
                                 *ngIf="accountFormOne.get('email').hasError('required') && accountFormOne.get('email').touched">
                             </mat-error>
                         </mat-form-field>
+                        <mat-form-field class="half-width">
+                            <input matInput formControlName="password" placeholder="Password" type="text" required>
+                            <mat-error
+                                *ngIf="accountFormOne.get('password').hasError('required') && accountFormOne.get('password').touched">
+                            </mat-error>
+                        </mat-form-field>
+                   
                         <div>
-                            <button mat-button matStepperNext>Next</button>
+                            <button class="button" mat-raised-button color="primary" matStepperNext>Prosegui</button>
                         </div>
 
                 </form>
@@ -59,12 +78,13 @@
                     <ng-template matStepLabel>Descrizione</ng-template>
 
                     <p><table class="half-width">
-                        <td>
-                            <mat-slide-toggle color=primary formControlName="availability">Voui mettere anche te a disposizione i tuoi mezzi?</mat-slide-toggle>
+                        <td>Vuoi mettere anche te a disposizione i tuoi mezzi?
+                            <mat-slide-toggle color=primary formControlName="availability"></mat-slide-toggle>
                         </td>
                     </table>
+                    <br>
                     <p>Seleziona le merci di cui ti occupi</p>
-                    <mat-selection-list #product formControlName="product" class="half-width">
+                    <mat-selection-list color="primary" #product formControlName="product" class="half-width">
                         <mat-list-option value="General Cargo" >
                             General Cargo
                         </mat-list-option>
@@ -88,36 +108,27 @@
                                 rows=12></textarea>
                         </mat-form-field>
                     </p>
-                    <p>
-                        <mat-form-field class="half-width">
-                            <input matInput formControlName="legalNumber" placeholder="Codice di Trasporto" type="text" required>
-                            <mat-error
-                                *ngIf="accountFormTwo.get('legalNumber').hasError('required') && accountFormTwo.get('legalNumber').touched">
-                            </mat-error>
-                        </mat-form-field>
-                        <mat-form-field class="half-width">
-                            <input matInput formControlName="password" placeholder="password" type="text" required>
-                            <mat-error
-                                *ngIf="accountFormTwo.get('password').hasError('required') && accountFormTwo.get('password').touched">
-                            </mat-error>
-                        </mat-form-field>
-                    </p>
+                   
                     <div>
-                        <button mat-button matStepperPrevious>Back</button>
-                        <button mat-button matStepperNext (click)="onSubmit()">Next</button>
+                        <button class="button" mat-raised-button color="primary" matStepperPrevious>Indietro</button>
+                        <button class="button" mat-raised-button color="primary" matStepperNext (click)="onSubmit()">Prosegui</button>
                     </div>
                 </form>
             </mat-step>
 
             <mat-step [optional]="isOptional">
 
-                <ng-template matStepLabel>Esito</ng-template>
-                <p>Ti sei registrato con successo</p>
+                <ng-template matStepLabel >Esito</ng-template>
+                <div class="esito">
+                <h3>Ti sei registrato con successo</h3>
+                <br>
+                <br>
                 <p>Premi indietro per modificare il tuo profilo oppure premi prosegui per iniziare</p>
+                <br>
                 <div>
-                    <button mat-button matStepperPrevious>Indietro</button>
-                    <button mat-button (click)="onDash()">Prosegui</button>
-                </div>
+                    <button class="button" mat-raised-button color="primary" matStepperPrevious>Indietro</button>
+                    <button class="button" mat-raised-button color="primary" (click)="onDash()">Prosegui</button>
+                </div></div>
             </mat-step>
         </mat-horizontal-stepper>
 

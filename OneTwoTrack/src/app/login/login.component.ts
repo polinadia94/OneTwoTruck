@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
   }
 //RegisterButton Function
   openDialog() {
-    this.dialog.open(InitialRecComponent, { width: '350px', height: '350px' });
+    this.dialog.open(InitialRecComponent, { width: '350px', height: '300px' });
   }
 
   //paremetri carosello

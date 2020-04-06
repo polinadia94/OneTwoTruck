@@ -10,6 +10,10 @@ import { DataSheetComponent } from '../data-sheet/data-sheet.component';
 import { MessagePageComponent } from '../message-page/message-page.component';
 import { AboutComponent } from '../about/about.component';
 import { ContractComponent} from '../contract/contract.component';
+import { RegolamentationComponent} from '../regolamentation/regolamentation.component';
+import { MyAccountComponent} from '../my-account/my-account.component';
+import { ListContractComponent} from '../list-contract/list-contract.component'
+
 
 
 
@@ -22,6 +26,9 @@ export const routes: Routes = [
     { path: 'data', component: DataSheetComponent },
     { path: 'message', component: MessagePageComponent },
     { path: 'about', component: AboutComponent },
+    { path: 'regolamentation', component: RegolamentationComponent },
+    { path: 'mieiContratti', component: ListContractComponent },
+    { path: 'personalArea', component: MyAccountComponent },
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'data/:id',     component: DataSheetComponent },
     { path: 'onetwoTruckContract',     component: ContractComponent },

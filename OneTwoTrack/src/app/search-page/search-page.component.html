@@ -1,23 +1,34 @@
-<div class="container-column" fxLayout="column" fxLayoutGap="10px">
-  <div fxFlex="70">
+<div fxFlex="100" fxLayout="row">
+  <div fxFlex="20" fxLayout="column" calss="searchBar box " style="background-color: #9FA8DA; height: 620px">
+    
+    <div class="search">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Cerca">
+    </div>
+  </div>
+
+
+  <div fxFlex="80" fxLayout="column" class="box scroll">
     <mat-list>
-      <mat-list-item *ngFor="let user of users" [routerLink]="['/data', user.id]">
+      <mat-list-item *ngFor="let user of users | filter:searchText" [routerLink]="['/data', user.id]" class="card">
         <img *ngIf="user.type=='Azienda'" matListAvatar src="/assets/images/icon-aziende.svg" title="Azienda">
         <img *ngIf="user.type=='Privato'" matListAvatar src="/assets/images/icon-privati.svg" title="Privato">
-        <h1 matLine> {{user.legalName}} </h1>
-        <p matLine>
-          <span> {{user.type}} </span>
+        <h1 matLine class="text"> {{user.legalName | uppercase}} </h1>
+        <h3 matLine class="text">
+          {{user.type}}
+        </h3>
+        <p matLine class="text">
+          {{user.operationsLocation}}
         </p>
-        <p matLine>
-          <span> {{user.operationsLocation}} </span>
+        
+        <p matLine class="product text" >
+          {{user.product}}
         </p>
-        <p matLine>
-          <span> {{user.product}} </span>
-        </p>
-        <p matLine>
-          <span> {{user.description}} </span>
+        
+        <p matLine class="text"> 
+          {{user.description}}
         </p>
       </mat-list-item>
     </mat-list>
   </div>
+
 </div>

@@ -15,9 +15,8 @@ $primary-text-color: #212121;
 $secondary-text-color: #757575;
 $divider-color: #bdbdbd;
 
-@mixin zero-margin($pad-up-down, $pad-left-right) {
-  margin: 0px auto;
-  padding: $pad-up-down $pad-left-right;
+*{
+  outline:none;
 }
 html {
   height: 100%;

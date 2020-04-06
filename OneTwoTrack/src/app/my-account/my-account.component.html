@@ -1,0 +1,83 @@
+
+<div class="edit full-width" >
+    <form novalidate [formGroup]="accountForm">
+
+    <p>
+        <mat-form-field class="half-width">
+            <input matInput formControlName="legalName" placeholder="{{user.legalName}}" type="text" >
+            
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <input matInput formControlName="tin" placeholder="{{user.tin}}" type="text" >
+            
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="half-width">
+            <input matInput formControlName="legalLocation" placeholder="{{user.legalLocation}}" type="text" >
+            
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <input matInput formControlName="operationsLocation" placeholder="{{user.operationsLocation}}" type="text" >
+           
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="half-width">
+            <input matInput formControlName="legalNumber" placeholder="{{user.legalNumber}}" type="text" >
+           
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <input matInput formControlName="phoneNumber" placeholder="{{user.phoneNumber}}" type="tel" >
+           
+        </mat-form-field>
+    </p>
+    <p>
+                       
+        <mat-form-field class="half-width">
+            <input matInput formControlName="email" placeholder="{{user.email}}" type="email" >
+            
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <input matInput formControlName="password" placeholder="{{user.password}}" type="text" >
+            
+            
+        </mat-form-field>
+
+    <table class="half-width" *ngIf="user.type=='Azienda'">
+        <td>Vuoi mettere anche te a disposizione i tuoi mezzi?
+            <mat-slide-toggle color=primary formControlName="availability"></mat-slide-toggle>
+        </td>
+    </table>
+    <br>
+    <p>Seleziona le merci di cui ti occupi</p>
+    <mat-selection-list color="primary"formControlName="product" class="half-width">
+        <mat-list-option value="General Cargo">
+            General Cargo
+        </mat-list-option>
+        <mat-list-option value="Catena del Freddo">
+            Catena del Freddo
+        </mat-list-option>
+        <mat-list-option value="Alimentari">
+            Alimentari
+        </mat-list-option>
+        <mat-list-option value="Merci Pericolose">
+            Merci Pericolose
+        </mat-list-option>
+        <mat-list-option value="Trasporti Straordinari">
+            Trasporti Straordinari
+        </mat-list-option>
+    </mat-selection-list>
+
+    <p>
+        <mat-form-field class="full-width">
+            <textarea matInput formControlName="description" placeholder="Description"
+                rows=12></textarea>
+        </mat-form-field>
+    </p>
+
+
+</form>
+<button class="button" mat-raised-button color="primary" routerLink="/dashboard">Salva le modifiche</button>
+
+</div>

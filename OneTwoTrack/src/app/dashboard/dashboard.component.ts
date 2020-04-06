@@ -7,7 +7,8 @@ import { RememberUserService } from '../services/remember-user.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-type=false;
+type=false; //type=true => "Azienda"  type=false => "Privato"
+nome=this.remember.myAccount.legalName;
   constructor(private remember:RememberUserService) { }
 
   ngOnInit(): void {

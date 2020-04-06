@@ -1,0 +1,51 @@
+.scroll{
+    overflow-y: auto;
+    max-height: 600px;
+}
+h1{
+    color:#3f51b5;
+}
+h3{
+    color:#5C6BC0;
+}
+.product{
+    color:#1A237E;
+}
+
+.box{
+    padding:20px;
+}
+p{
+    white-space: normal !important; 
+}
+img{
+    margin:10px;
+}
+
+.text{
+    margin:3px !important;
+}
+
+.card{
+    border: 1px solid #3f51b5 !important;
+    margin-bottom: 5px;
+    border-radius:5px;
+}
+
+
+.form-control {
+    vertical-align: middle;
+    border: 2px solid #3F51B5;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    box-shadow: 0 10px 40px 0 #1A237E;
+    font-size: 13pt;
+    padding: 3px;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  }
